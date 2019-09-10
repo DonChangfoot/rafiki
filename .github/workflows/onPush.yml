@@ -18,7 +18,7 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
     - name: Use yarn
-      uses: Borales/actions-yarn
+      uses: Borales/actions-yarn@master
     - name: yarn install, lint, build, and test
       run: |
         node -v
@@ -26,6 +26,6 @@ jobs:
         yarn install
         yarn lint
         yarn build
-        yarn test
+        yarn test:ci
       env:
         CI: true
